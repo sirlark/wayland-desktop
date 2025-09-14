@@ -5,7 +5,7 @@
 
 EAPI=8
 
-inherit meson
+inherit meson xdg-utils
 
 DESCRIPTION="QT based greeter for greetd"
 HOMEPAGE="https://gitlab.com/marcusbritanicus/QtGreet"
@@ -77,4 +77,12 @@ src_configure() {
 src_install() {
 	meson_src_install
 	keepdir "/var/lib/qtgreet"
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
