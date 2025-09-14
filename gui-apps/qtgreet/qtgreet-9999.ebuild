@@ -1,3 +1,4 @@
+# Copyright 2025 James Dominy
 # Copyright 2021-2023 Aisha Tammy
 # Copyright 2021 Ichika Zou
 # Distributed under the terms of the ISC License
@@ -27,6 +28,7 @@ CDEPEND="
 	dev-libs/json-c
 	dev-libs/wayland
 	media-video/mpv:=
+	x11-misc/lightdm
 	x11-libs/libxkbcommon:=
 	greetwl? ( gui-libs/wlroots:0/18 )
 	qt5? (
